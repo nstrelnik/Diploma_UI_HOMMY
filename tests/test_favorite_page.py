@@ -6,7 +6,7 @@ from pages.favorite_page import favorite
 
 @allure.story('Удаление товара из Избранного')
 def test_delete_product_from_favorite():
-    product_name = "Ваза Mikayla S"
+    product_name = "Ваза CRACLE"
 
     authorization.open_browser()
 

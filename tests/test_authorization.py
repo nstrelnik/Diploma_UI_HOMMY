@@ -1,3 +1,5 @@
+import time
+
 from pages.authorization_page import authorization
 from data.users import User
 import allure
@@ -19,6 +21,20 @@ def test_successful_authorization():
         .click_login()
     )
     authorization.assert_successful_authorization()
+
+@allure.story('Неверный логин, проверка ошибки')
+def test_invalid_login():
+    authorization.open_browser()
+    authorization.open_authorization_form()
+    authorization.click_login()
+    authorization.assert_invalid_login()
+
+@allure.story('Неверный пароль, проверка ошибки')
+def test_invalid_password():
+    authorization.open_browser()
+    authorization.open_authorization_form()
+    authorization.click_login()
+    authorization.assert_invalid_passwordПро()
 
 
 @allure.story('Неуспешная авторизация')

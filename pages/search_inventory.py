@@ -19,5 +19,14 @@ class Search:
         assert browser.all('.card-product__title').element_by(have.exact_text(value))
         return self
 
+    @allure.step('Ввод поискового запроса')
+    def search_query_open_tovar(self):
+        browser.element('.card-product__link').click()
+        return self
+
+    def search_query_open_ttt(self):
+        browser.element('//*[@name = "ORDER_PROP_4"]').click()
+        return self
+
 
 search = Search()

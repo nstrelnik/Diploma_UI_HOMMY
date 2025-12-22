@@ -13,7 +13,7 @@ def test_add_product_to_cart():
         user_email='testtest@mail.ru',
         user_password='testtest@mail.ru'
     )
-    product_name = "Ваза Mikayla S"
+    product_name = "Ваза CRACLE"
 
     authorization.open_browser()
     authorization.open_authorization_form()
@@ -40,7 +40,7 @@ def test_add_product_to_favorite():
         user_email='testtest@mail.ru',
         user_password='testtest@mail.ru'
     )
-    product_name = "Ваза Mikayla S"
+    product_name = "Ваза CRACLE"
 
     authorization.open_browser()
     authorization.open_authorization_form()
@@ -63,10 +63,16 @@ def test_add_product_to_favorite():
 
 @allure.story('Поиск товара в каталоге через строку поиска')
 def test_search():
-    product_name = "Часы настольные STELE"
+    product_name = "Ваза CRACLE"
 
     authorization.open_browser()
 
     search.open_search()
     search.search_query_enter(product_name)
     search.search_query_successful(product_name)
+
+
+
+
+
+
