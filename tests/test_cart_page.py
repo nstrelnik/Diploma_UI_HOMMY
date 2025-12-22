@@ -47,7 +47,7 @@ def test_add_different_products():
 
 
 #@allure.story('Проверка переноса цены в корзину с детальной товара')
-
+#
 
 
 
