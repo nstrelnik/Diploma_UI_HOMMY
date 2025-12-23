@@ -4,6 +4,7 @@ from selene import browser
 from utils import attach
 from dotenv import load_dotenv
 from selenium.webdriver.chrome.options import Options
+import tempfile
 import os
 
 
@@ -21,6 +22,11 @@ def browser_management():
     #options = Options()
     #options.add_argument('--headless=new')
     #browser.config.driver_options = options
+
+    options = Options()
+    options.add_argument(f'--user-data-dir={tempfile.mkdtemp()}')
+
+    browser.config.driver_options = options
 
     # options = Options()
     # #options.add_argument('--headless=new')
