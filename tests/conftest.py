@@ -21,6 +21,7 @@ def browser_management():
     options = Options()
     options.add_argument('--headless=new')
     browser.config.driver_options = options
+    print("CHROME ARGS:", browser.config.driver_options.arguments)
 
     # options = Options()
     # #options.add_argument('--headless=new')
