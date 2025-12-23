@@ -24,7 +24,7 @@ def browser_management():
     # browser.config.driver_options = options
 
     options = Options()
-    options.add_argument('--headless=new')
+    # options.add_argument('--headless=new')
     selenoid_capabilities = {
         "browserName": "chrome",
         "browserVersion": "128.0",
