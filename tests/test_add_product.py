@@ -36,6 +36,7 @@ def test_add_product_to_cart():
 
 
 @allure.story('Добавление товара в Избранное пользователя')
+@allure.title("Добавление товара в Избранное пользователя")
 def test_add_product_to_favorite():
     user = User(
         user_email='testtest@mail.ru',
