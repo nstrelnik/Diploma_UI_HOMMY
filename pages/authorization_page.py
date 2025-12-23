@@ -62,7 +62,7 @@ class Authorization:
 
     @allure.step('Проверка выхода из аккаунта')
     def asser_logout_successful(self):
-        assert browser.driver.current_url == "https://myhommy.ru/auth/"
+        assert browser.driver.current_url == "https://hommy.ru/auth/"
         return self
 
 

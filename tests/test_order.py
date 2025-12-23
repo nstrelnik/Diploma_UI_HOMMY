@@ -12,6 +12,7 @@ def test_create_order_Kaliningrad():
     product_name = "Ваза для фруктов TRINA"
 
     authorization.open_browser()
+    authorization.click_popup()
 
     search.open_search()
     search.search_query_enter(product_name)
@@ -36,7 +37,7 @@ def test_create_order_Kaliningrad():
 
 @allure.story('Проверка недоступности доставки НЕ Калининград. НЕавторизованный пользователь')
 def test_create_order_not_Kaliningrad():
-    product_name = "Ваза CRACLE"
+    product_name = "Ваза Deer"
 
     authorization.open_browser()
     authorization.click_popup()
@@ -59,7 +60,7 @@ def test_create_order_not_Kaliningrad():
 
 @allure.story('Проверка суммы заказа. Калининград. Изменение кол-ва товара + Доставка')
 def test_assert_order_summ_delivery():
-    product_name = "Ваза CRACLE"
+    product_name = "Ваза Deer"
 
     authorization.open_browser()
     authorization.click_popup()
@@ -85,7 +86,7 @@ def test_assert_order_summ_delivery():
 
 @allure.story('Проверка суммы заказа. Калининград. Доставка + Изменение кол-ва товара')
 def test_assert_order_summ_delivery():
-    product_name = "Ваза CRACLE"
+    product_name = "Ваза Deer"
 
     authorization.open_browser()
     authorization.click_popup()

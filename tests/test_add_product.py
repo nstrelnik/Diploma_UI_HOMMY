@@ -13,7 +13,7 @@ def test_add_product_to_cart():
         user_email='testtest@mail.ru',
         user_password='testtest@mail.ru'
     )
-    product_name = "Ваза CRACLE"
+    product_name = "Подсвечник Montone M"
 
     authorization.open_browser()
     authorization.click_popup()
@@ -41,7 +41,7 @@ def test_add_product_to_favorite():
         user_email='testtest@mail.ru',
         user_password='testtest@mail.ru'
     )
-    product_name = "Ваза CRACLE"
+    product_name = "Подсвечник Montone M"
 
     authorization.open_browser()
     authorization.click_popup()

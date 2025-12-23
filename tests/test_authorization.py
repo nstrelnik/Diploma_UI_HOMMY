@@ -37,7 +37,7 @@ def test_invalid_password():
     authorization.click_popup()
     authorization.open_authorization_form()
     authorization.click_login()
-    authorization.assert_invalid_passwordПро()
+    authorization.assert_invalid_password()
 
 
 @allure.story('Неуспешная авторизация')
