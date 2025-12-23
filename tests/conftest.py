@@ -20,8 +20,15 @@ def browser_management():
     #
     options = Options()
     options.add_argument('--headless=new')
+    #browser.config.driver_options = options
+
+    workspace = os.environ.get('WORKSPACE', '/tmp')
+    user_data_dir = os.path.join(workspace, 'chrome-profile')
+    options.add_argument(f'--user-data-dir={user_data_dir}')
+
     browser.config.driver_options = options
-    print("CHROME ARGS:", browser.config.driver_options.arguments)
+
+
 
     # options = Options()
     # #options.add_argument('--headless=new')
