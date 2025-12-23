@@ -39,6 +39,7 @@ def test_create_order_not_Kaliningrad():
     product_name = "Ваза CRACLE"
 
     authorization.open_browser()
+    authorization.click_popup()
 
     search.open_search()
     search.search_query_enter(product_name)
@@ -61,6 +62,7 @@ def test_assert_order_summ_delivery():
     product_name = "Ваза CRACLE"
 
     authorization.open_browser()
+    authorization.click_popup()
 
     search.open_search()
     search.search_query_enter(product_name)
@@ -86,6 +88,7 @@ def test_assert_order_summ_delivery():
     product_name = "Ваза CRACLE"
 
     authorization.open_browser()
+    authorization.click_popup()
 
     search.open_search()
     search.search_query_enter(product_name)

@@ -1,4 +1,4 @@
-from selene import browser, have
+from selene import browser, have, by
 import allure
 from data.users import User
 
@@ -9,6 +9,12 @@ class Authorization:
     def open_browser(self):
         browser.open('')
         return self
+
+    @allure.step('Согласие с продажей')
+    def click_popup(self):
+        browser.element(by.text("Понятно")).click()
+        return self
+
 
     @allure.step('Открытие формы авторизации')
     def open_authorization_form(self):

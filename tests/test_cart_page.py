@@ -10,6 +10,7 @@ def test_delete_from_cart():
     product_name = "Ваза CRACLE"
 
     authorization.open_browser()
+    authorization.click_popup()
 
     inventory.open_catalog()
     inventory.open_product_page(product_name)
@@ -25,6 +26,7 @@ def test_add_different_products():
     product_name_two = "Фартук Regatta"
 
     authorization.open_browser()
+    authorization.click_popup()
 
     search.open_search()
     search.search_query_enter(product_name_one)

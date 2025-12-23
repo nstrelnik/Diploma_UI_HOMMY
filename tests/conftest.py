@@ -19,9 +19,9 @@ def browser_management():
     browser.config.window_width = 1920
     browser.config.window_height = 1080
     #
-    #options = Options()
-    #options.add_argument('--headless=new')
-    #browser.config.driver_options = options
+    # options = Options()
+    # #options.add_argument('--headless=new')
+    # browser.config.driver_options = options
 
     options = Options()
     options.add_argument('--headless=new')

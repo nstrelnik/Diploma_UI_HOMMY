@@ -9,6 +9,7 @@ def test_delete_product_from_favorite():
     product_name = "Ваза CRACLE"
 
     authorization.open_browser()
+    authorization.click_popup()
 
     inventory.open_catalog()
 

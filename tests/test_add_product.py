@@ -16,6 +16,7 @@ def test_add_product_to_cart():
     product_name = "Ваза CRACLE"
 
     authorization.open_browser()
+    authorization.click_popup()
     authorization.open_authorization_form()
     (
         authorization
@@ -43,6 +44,7 @@ def test_add_product_to_favorite():
     product_name = "Ваза CRACLE"
 
     authorization.open_browser()
+    authorization.click_popup()
     authorization.open_authorization_form()
     (
         authorization
@@ -66,6 +68,8 @@ def test_search():
     product_name = "Ваза CRACLE"
 
     authorization.open_browser()
+
+    authorization.click_popup()
 
     search.open_search()
     search.search_query_enter(product_name)

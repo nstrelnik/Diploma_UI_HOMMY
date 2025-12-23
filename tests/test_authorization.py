@@ -13,6 +13,7 @@ def test_successful_authorization():
     )
 
     authorization.open_browser()
+    authorization.click_popup()
     authorization.open_authorization_form()
     (
         authorization
@@ -25,6 +26,7 @@ def test_successful_authorization():
 @allure.story('Неверный логин, проверка ошибки')
 def test_invalid_login():
     authorization.open_browser()
+    authorization.click_popup()
     authorization.open_authorization_form()
     authorization.click_login()
     authorization.assert_invalid_login()
@@ -32,6 +34,7 @@ def test_invalid_login():
 @allure.story('Неверный пароль, проверка ошибки')
 def test_invalid_password():
     authorization.open_browser()
+    authorization.click_popup()
     authorization.open_authorization_form()
     authorization.click_login()
     authorization.assert_invalid_passwordПро()
@@ -45,6 +48,7 @@ def test_invalid_authorization():
     )
 
     authorization.open_browser()
+    authorization.click_popup()
     authorization.open_authorization_form()
     (
         authorization
@@ -63,6 +67,7 @@ def test_logout():
     )
 
     authorization.open_browser()
+    authorization.click_popup()
     authorization.open_authorization_form()
     (
         authorization
