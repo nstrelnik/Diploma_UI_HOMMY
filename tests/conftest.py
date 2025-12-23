@@ -23,10 +23,13 @@ def browser_management():
     #options.add_argument('--headless=new')
     #browser.config.driver_options = options
 
-    options = Options()
-    options.add_argument(f'--user-data-dir={tempfile.mkdtemp()}')
+    workspace = os.environ.get('WORKSPACE', '/tmp')
+    user_data_dir = os.path.join(workspace, 'chrome-profile')
 
-    browser.config.driver_options = options
+    os.makedirs(user_data_dir, exist_ok=True)  # создаёт папку, если её нет
+
+    options = Options()
+    options.add_argument(f'--user-data-dir={user_data_dir}')
 
     # options = Options()
     # #options.add_argument('--headless=new')
