@@ -104,8 +104,6 @@ def test_assert_order_summ_delivery():
 
     cart.assert_order_summ_kolvo_and_delivery()
 
-#
-
 
 
 
