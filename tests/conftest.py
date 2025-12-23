@@ -18,17 +18,9 @@ def browser_management():
     browser.config.window_width = 1920
     browser.config.window_height = 1080
     #
-    options = Options()
-    options.add_argument('--headless=new')
+    #options = Options()
+    #options.add_argument('--headless=new')
     #browser.config.driver_options = options
-
-    workspace = os.environ.get('WORKSPACE', '/tmp')
-    user_data_dir = os.path.join(workspace, 'chrome-profile')
-    options.add_argument(f'--user-data-dir={user_data_dir}')
-
-    browser.config.driver_options = options
-
-
 
     # options = Options()
     # #options.add_argument('--headless=new')
@@ -54,9 +46,9 @@ def browser_management():
     # browser.config.driver = driver
     yield
 
-    # attach.add_screenshot(browser)
-    # attach.add_logs(browser)
-    # attach.add_html(browser)
-    # attach.add_video(browser)
+    attach.add_screenshot(browser)
+    attach.add_logs(browser)
+    attach.add_html(browser)
+    attach.add_video(browser)
 
     browser.quit()
