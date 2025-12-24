@@ -5,6 +5,7 @@ from pages.cart_page import cart
 from pages.search_inventory import search
 
 
+@allure.title("Удаление товара из корзины")
 @allure.story('Удаление товара из корзины')
 def test_delete_from_cart():
     product_name = "Ваза CRACLE"
@@ -20,6 +21,8 @@ def test_delete_from_cart():
     cart.delete_product_from_cart()
     cart.assert_delete_product_from_cart()
 
+
+@allure.title("Добавление разных товаров в корзину")
 @allure.story('Добавление разных товаров в корзину')
 def test_add_different_products():
     product_name_one = "Ваза CRACLE"

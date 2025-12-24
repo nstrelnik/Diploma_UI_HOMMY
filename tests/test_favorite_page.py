@@ -4,6 +4,7 @@ from pages.inventory_page import inventory
 from pages.favorite_page import favorite
 
 
+@allure.title("Удаление товара из Избранного")
 @allure.story('Удаление товара из Избранного')
 def test_delete_product_from_favorite():
     product_name = "Подсвечник Montone M"

@@ -7,6 +7,7 @@ from pages.cart_page import cart
 from pages.search_inventory import search
 
 
+@allure.title("Оформление заказа с корректными данными. НЕавторизованный пользователь. Калининград")
 @allure.story('Оформление заказа с корректными данными. НЕавторизованный пользователь. Калининград')
 def test_create_order_Kaliningrad():
     product_name = "Ваза для фруктов TRINA"
@@ -35,6 +36,8 @@ def test_create_order_Kaliningrad():
     time.sleep(5)
     cart.assert_create_order()
 
+
+@allure.title("Проверка недоступности доставки НЕ Калининград. НЕавторизованный пользователь")
 @allure.story('Проверка недоступности доставки НЕ Калининград. НЕавторизованный пользователь')
 def test_create_order_not_Kaliningrad():
     product_name = "Ваза Deer"
@@ -58,6 +61,7 @@ def test_create_order_not_Kaliningrad():
     time.sleep(2)
 
 
+@allure.title("Проверка суммы заказа. Калининград. Изменение кол-ва товара + Доставка")
 @allure.story('Проверка суммы заказа. Калининград. Изменение кол-ва товара + Доставка')
 def test_assert_order_summ_delivery():
     product_name = "Ваза Deer"
@@ -84,6 +88,8 @@ def test_assert_order_summ_delivery():
     cart.assert_order_summ_kolvo()
     cart.assert_order_summ_delivery()
 
+
+@allure.title("Проверка суммы заказа. Калининград. Доставка + Изменение кол-ва товара")
 @allure.story('Проверка суммы заказа. Калининград. Доставка + Изменение кол-ва товара')
 def test_assert_order_summ_delivery():
     product_name = "Ваза Deer"
