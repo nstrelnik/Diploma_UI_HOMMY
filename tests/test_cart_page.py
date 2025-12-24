@@ -8,7 +8,7 @@ from pages.search_inventory import search
 @allure.title("Удаление товара из корзины")
 @allure.story('Удаление товара из корзины')
 def test_delete_from_cart():
-    product_name = "Ваза CRACLE"
+    product_name = "Подсвечник Montone L"
 
     authorization.open_browser()
     authorization.click_popup()

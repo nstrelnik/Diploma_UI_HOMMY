@@ -513,6 +513,8 @@ class Cart:
         Tel = browser.element('[name="ORDER_PROP_5"]')
         Tel.type("79216088034").press(Keys.ENTER)
         Comment = browser.element('[name="ORDER_DESCRIPTION"]').click()
+        Adress = browser.element('[name="ORDER_PROP_6"]')
+        Adress.type("Тестовый адрес")
         time.sleep(2)
         Comment.type('Тестовый комментарий')
         return self
@@ -659,7 +661,7 @@ class Cart:
 
     @allure.step('Проверка недоступности доставки НЕ для Калининграда')
     def assert_pickup_not_Kaliningrad(self):
-        assert browser.element('.cart__order-delivery').should(have.text('Стоимость доставки будет предоставлена позже (Ошибка: Доступ к расчету заблокирован!)')).click()
+        assert browser.element('.cart__order-delivery').should(have.text('Стоимость доставки будет предоставлена позже (Ошибка: У товаров не задан вес!)')).click()
         return self
 
 cart = Cart()
