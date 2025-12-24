@@ -7,6 +7,7 @@ from pages.cart_page import cart
 import allure
 
 
+@allure.title("Добавление товара в корзину пользователя")
 @allure.story('Добавление товара в корзину пользователя')
 def test_add_product_to_cart():
     user = User(
@@ -64,6 +65,7 @@ def test_add_product_to_favorite():
     favorite.delete_product_from_favorite()
 
 
+@allure.title("Поиск товара в каталоге через строку поиска")
 @allure.story('Поиск товара в каталоге через строку поиска')
 def test_search():
     product_name = "Ваза CRACLE"
